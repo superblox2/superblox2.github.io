@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Basit Sekmeli Site</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      background-color: #00258f; /* Arka plan rengi */
+      color: white; /* Yazılar görünür olsun diye beyaz */
+    }
+    .tabs { 
+      display: flex; 
+      background: #111; /* Sekmeler için kontrast renk */
+    }
+    .tabs button {
+      flex: 1;
+      padding: 14px;
+      background: #111;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .tabs button:hover { background: #333; }
+    .tabcontent {
+      display: none;
+      padding: 20px;
+    }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+
+<div class="tabs">
+  <button onclick="openTab('tab1')">Superblox 2</button>
+  <button onclick="openTab('tab2')">Superblox Classic</button>
+  <button onclick="openTab('tab3')">Olgun Games</button>
+</div>
+
+<div id="tab1" class="tabcontent active">
+  <h2>Superblox 2</h2>
+  <p>Burası birinci sekmenin içeriği.</p>
+</div>
+
+<div id="tab2" class="tabcontent">
+  <h2>Superblox Classic</h2>
+  <!-- Canva embed kodu -->
+  <div style="position: relative; width: 100%; height: 0; padding-top: 90.3367%;
+   padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+   border-radius: 8px; will-change: transform;">
+    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+      src="https://www.canva.com/design/DAG1GDObjO4/Q2LjPvn4cu8umhy9SDjfPg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+    </iframe>
+  </div>
+  <a href="https://www.canva.com/design/DAG1GDObjO4/Q2LjPvn4cu8umhy9SDjfPg/view?utm_content=DAG1GDObjO4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Superblox Classic</a> - KAYRA BERAT KENESARI
+</div>
+
+<div id="tab3" class="tabcontent">
+  <h2>Olgun Games</h2>
+  <!-- Canva embed -->
+  <iframe 
+    src="https://www.canva.com/design/DAGkcqaQ8Ig/3V88pO47mLBG7QG4UVQKWg/view?embed" 
+    style="width:100%; height:90vh; border:none;" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<script>
+function openTab(tabId) {
+  const contents = document.querySelectorAll('.tabcontent');
+  contents.forEach(c => c.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
